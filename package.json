@@ -1,0 +1,11 @@
+{
+  "name": "project-phase1",
+  "version": "1.0.0",
+  "description": "For Booking Trip",
+  "main": "script.js",
+  "scripts": {
+    
+  },
+  "author": "Mark Paul",
+  "license": "MIT"
+}
