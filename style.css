@@ -1,60 +1,45 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1,
-  h2 {
-    text-align: center;
-  }
-  
-  .menu,
-  .order-summary {
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 5px;
+    background-color: #f2f2f2; /* set the background color to a light gray */
+    font-family: Arial, sans-serif; /* use a sans-serif font for better readability */
   }
   
   .menu {
-    border: 2px solid #ddd;
+    background-color: #ffffff; /* set the background color of the menu section to white */
+    padding: 20px; /* add some padding to the menu section */
+    border-radius: 10px; /* round the corners of the menu section */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
   }
   
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-top: 10px;
-  }
-  
-  select,
-  input[type="checkbox"] {
-    margin-left: 10px;
+  h1 {
+    color: #e84c3d; /* set the color of the heading to a bright red */
+    text-align: center; /* center the heading */
+    margin-top: 50px; /* add some margin to the top */
   }
   
   button[type="submit"] {
-    margin-top: 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+    background-color: #e84c3d; /* set the background color of the submit button to the same bright red */
+    color: #ffffff; /* set the text color to white */
+    padding: 10px 20px; /* add some padding */
+    border: none; /* remove the border */
+    border-radius: 5px; /* round the corners */
+    font-weight: bold; /* make the text bold */
+    margin-top: 20px; /* add some margin to the top */
   }
   
   button[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #d34431; /* darken the background color on hover */
+    cursor: pointer; /* change the cursor to a hand on hover */
   }
   
-  #burger-type-summary,
-  #toppings-summary,
-  #character-summary {
-    margin-top: 20px;
+  .order-summary {
+    background-color: #ffffff; /* set the background color of the order summary section to white */
+    padding: 20px; /* add some padding */
+    border-radius: 10px; /* round the corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
   }
+  
+  h2 {
+    color: #e84c3d; /* set the color of the subheadings to the same bright red */
+    margin-top: 0; /* remove the default margin from the top */
+  }
+  

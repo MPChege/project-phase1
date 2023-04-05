@@ -8,49 +8,52 @@
   </head>
   <body>
     <h1>Bob's Burgers Order</h1>
+<div class="menu">
+  <h2>Menu</h2>
+  <form>
+    <label for="burger-type">Burger Type:</label>
+    <select id="burger-type">
+      <option value="hamburger">Hamburger</option>
+      <option value="cheeseburger">Cheeseburger</option>
+      <option value="bacon-burger">Bacon Burger</option>
+      <option value="veggie-burger">Veggie Burger</option>
+    </select>
 
-    <div class="menu">
-      <h2>Menu</h2>
-      <form>
-        <label for="burger-type">Burger Type:</label>
-        <select id="burger-type">
-          <option value="hamburger">Hamburger</option>
-          <option value="cheeseburger">Cheeseburger</option>
-          <option value="bacon-burger">Bacon Burger</option>
-          <option value="veggie-burger">Veggie Burger</option>
-        </select>
+    <label for="toppings">Toppings:</label>
+    <input type="checkbox" id="lettuce" name="topping" value="lettuce" />
+    <label for="lettuce">Lettuce</label>
 
-        <label for="toppings">Toppings:</label>
-        <input type="checkbox" id="lettuce" name="topping" value="lettuce" />
-        <label for="lettuce">Lettuce</label>
+    <input type="checkbox" id="tomato" name="topping" value="tomato" />
+    <label for="tomato">Tomato</label>
 
-        <input type="checkbox" id="tomato" name="topping" value="tomato" />
-        <label for="tomato">Tomato</label>
+    <input type="checkbox" id="onion" name="topping" value="onion" />
+    <label for="onion">Onion</label>
 
-        <input type="checkbox" id="onion" name="topping" value="onion" />
-        <label for="onion">Onion</label>
+    <input type="checkbox" id="pickles" name="topping" value="pickles" />
+    <label for="pickles">Pickles</label>
 
-        <input type="checkbox" id="pickles" name="topping" value="pickles" />
-        <label for="pickles">Pickles</label>
+    <br />
 
-        <br />
+    <label for="character">Favorite Character:</label>
+    <select id="character"></select>
 
-        <label for="character">Favorite Character:</label>
-        <select id="character"></select>
+    <br />
 
-        <br />
+    <button type="submit">Place Order</button>
+  </form>
+</div>
 
-        <button type="submit">Place Order</button>
-      </form>
-    </div>
+<div class="order-summary">
+  <h2>Order Summary</h2>
+  <p id="burger-type-summary"></p>
+  <p id="toppings-summary"></p>
+  <div class="image-container">
+    <img id="burger-image" src="" alt="Burger Image" />
+  </div>
+  <p id="character-summary"></p>
+  <div class="image-container">
+    <img id="character-image" src="" alt="Character Image" />
+  </div>
+</div>
 
-    <div class="order-summary">
-      <h2>Order Summary</h2>
-      <p id="burger-type-summary"></p>
-      <p id="toppings-summary"></p>
-      <p id="character-summary"></p>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+<script src="script.js"></script>

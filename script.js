@@ -4,6 +4,8 @@ const characterDropdown = document.querySelector("#character");
 const burgerTypeSummary = document.querySelector("#burger-type-summary");
 const toppingsSummary = document.querySelector("#toppings-summary");
 const characterSummary = document.querySelector("#character-summary");
+const burgerImage = document.querySelector("#burger-image");
+const characterImage = document.querySelector("#character-image");
 
 // Populate character dropdown using Bob's Burgers API
 fetch("https://bobsburgers-api.herokuapp.com/characters/?limit=9&skip=")
@@ -34,10 +36,17 @@ document.querySelector("form").addEventListener("submit", (event) => {
   });
 
   // Get selected character
-  const character = characterDropdown.options[characterDropdown.selectedIndex].text;
+  const characterId = characterDropdown.value;
+  const characterName = characterDropdown.options[characterDropdown.selectedIndex].text;
 
   // Update order summary
   burgerTypeSummary.innerText = `Burger Type: ${burgerType}`;
   toppingsSummary.innerText = `Toppings: ${toppings.join(", ")}`;
-  characterSummary.innerText = `Favorite Character: ${character}`;
+  characterSummary.innerText = `Favorite Character: ${characterName}`;
+
+  // Update images
+  const burgerImageUrl = `https://dummyimage.com/200x200/333333/ffffff&text=${burgerType}`;
+  burgerImage.src = burgerImageUrl;
+  const characterImageUrl = `https://bobsburgers-api.herokuapp.com/images/medium/${characterId}.jpg`;
+  characterImage.src = characterImageUrl;
 });
