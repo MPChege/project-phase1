@@ -1,45 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Bob's Burgers Burger Order</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<h1>Bob's Burgers Burger Order</h1>
-	<form>
-		<label for="burger-type">Burger Type:</label>
-		<input type="text" id="burger-type" name="burger-type"><br><br>
-		<label for="topping1">Topping 1:</label>
-		<input type="text" id="topping1" name="topping1"><br><br>
-		<label for="topping2">Topping 2:</label>
-		<input type="text" id="topping2" name="topping2"><br><br>
-		<label for="topping3">Topping 3:</label>
-		<input type="text" id="topping3" name="topping3"><br><br>
-		<label for="options">Options:</label>
-		<select id="options" name="options">
-			<option value="">Choose an option</option>
-			<option value="No Cheese">No Cheese</option>
-			<option value="Extra Cheese">Extra Cheese</option>
-			<option value="Bacon">Bacon</option>
-			<option value="Avocado">Avocado</option>
-		</select><br><br>
-		<label for="image">Burger Image:</label>
-		<select id="image" name="image">
-			<option value="">Choose an image</option>
-			<option value="https://www.sargento.com/assets/Uploads/Recipe/Image/burgercampNachos_07__FillWzExNzAsNTgzXQ.jpg">Classic Burger</option>
-			<option value="https://d20vwa69zln1wj.cloudfront.net/e458b429406cd96dc55262f7b81166b7/main/cbdc8b3cad36319613657e000c4f284e-20230404.jpg">Cheeseburger</option>
-			<option value="https://d20vwa69zln1wj.cloudfront.net/e458b429406cd96dc55262f7b81166b7/main/d8cf14fda3b355d1e2359c33bc63e0f9-20230402.jpg">Bacon Burger</option>
-			<option value="https://d20vwa69zln1wj.cloudfront.net/e458b429406cd96dc55262f7b81166b7/main/ad4ecb68d888931625a86762de784b43-20230404.jpg">Veggie Burger</option>
-		</select><br><br>
-		<button type="button" onclick="orderBurger()">Order Burger</button>
-	</form>
-	<!-- <div id="burger-image-container"> -->
-		<img id="burger-image" src="" alt="Burger Image">
-	</div>
-	<p id="burger-result"></p>
-  <div id="characters"></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bob's Burgers Order</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bob's Burgers Order</h1>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="script.js"></script>
-</body>
+    <div class="menu">
+      <h2>Menu</h2>
+      <form>
+        <label for="burger-type">Burger Type:</label>
+        <select id="burger-type">
+          <option value="hamburger">Hamburger</option>
+          <option value="cheeseburger">Cheeseburger</option>
+          <option value="bacon-burger">Bacon Burger</option>
+          <option value="veggie-burger">Veggie Burger</option>
+        </select>
+
+        <label for="toppings">Toppings:</label>
+        <input type="checkbox" id="lettuce" name="topping" value="lettuce" />
+        <label for="lettuce">Lettuce</label>
+
+        <input type="checkbox" id="tomato" name="topping" value="tomato" />
+        <label for="tomato">Tomato</label>
+
+        <input type="checkbox" id="onion" name="topping" value="onion" />
+        <label for="onion">Onion</label>
+
+        <input type="checkbox" id="pickles" name="topping" value="pickles" />
+        <label for="pickles">Pickles</label>
+
+        <br />
+
+        <label for="character">Favorite Character:</label>
+        <select id="character"></select>
+
+        <br />
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <p id="burger-type-summary"></p>
+      <p id="toppings-summary"></p>
+      <p id="character-summary"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

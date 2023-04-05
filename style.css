@@ -1,83 +1,60 @@
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
   }
   
-  h1 {
+  h1,
+  h2 {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  }
+  
+  .menu,
+  .order-summary {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+  .menu {
+    border: 2px solid #ddd;
   }
   
   form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   
   label {
-    display: block;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   
-  input[type="text"] {
-    width: 100%;
+  select,
+  input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #e5e5e5;
-    font-size: 16px;
-  }
-  
-  button[type="button"] {
-    background-color: #c02d2d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
   }
   
-  button[type="button"]:hover {
-    background-color: #ae0e0e;
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
   }
   
-  #burger-result {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 50px;
+  #burger-type-summary,
+  #toppings-summary,
+  #character-summary {
+    margin-top: 20px;
   }
-  
-  .burger-option {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .burger-option img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
-  }
-  
-  .burger-option label {
-    text-align: left;
-    margin: auto 0;
-    font-weight: bold;
-  }
-  
-  @media (max-width: 768px) {
-    .burger-option {
-      flex-wrap: wrap;
-    }
-    .burger-option img {
-      max-width: 50%;
-      margin: auto;
-    }
-  }
-  
