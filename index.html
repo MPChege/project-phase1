@@ -1,119 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Commute Railway Services</title>
-    <link rel="stylesheet" href="./style.css">
+	<title>Bob's Burgers Burger Order</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            <h2 class="logo"> India Commute Railway Services</h2>
-            <nav>
-                <ul>
-                    <li class="active">Home</li>
-                    <li>Railway Schedule</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Contact</li>
-                    <li><button class="btn">Book Ticket</button></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="content">
-            <h3>India Commute Services</h3>
-            <h1>Railway<br>Transport</h1>
-            <p>You are probably enthusiast for railway services.For that reason we want <br> to make it easier for you by making it possible to book tickets online. </p>
+	<h1>Bob's Burgers Burger Order</h1>
+	<form>
+		<label for="burger-type">Burger Type:</label>
+		<input type="text" id="burger-type" name="burger-type"><br><br>
+		<label for="topping1">Topping 1:</label>
+		<input type="text" id="topping1" name="topping1"><br><br>
+		<label for="topping2">Topping 2:</label>
+		<input type="text" id="topping2" name="topping2"><br><br>
+		<label for="topping3">Topping 3:</label>
+		<input type="text" id="topping3" name="topping3"><br><br>
+		<label for="options">Options:</label>
+		<select id="options" name="options">
+			<option value="">Choose an option</option>
+			<option value="No Cheese">No Cheese</option>
+			<option value="Extra Cheese">Extra Cheese</option>
+			<option value="Bacon">Bacon</option>
+			<option value="Avocado">Avocado</option>
+		</select><br><br>
+		<label for="image">Burger Image:</label>
+		<select id="image" name="image">
+			<option value="">Choose an image</option>
+			<option value="https://i.imgur.com/2ff20yN.jpg">Classic Burger</option>
+			<option value="https://i.imgur.com/7ekak8z.jpg">Cheeseburger</option>
+			<option value="https://i.imgur.com/9RtH08z.jpg">Bacon Burger</option>
+			<option value="https://i.imgur.com/Nc7oW8d.jpg">Veggie Burger</option>
+		</select><br><br>
+		<button type="button" onclick="orderBurger()">Order Burger</button>
+	</form>
+	<div id="burger-image-container">
+		<img id="burger-image" src="" alt="Burger Image">
+	</div>
+	<p id="burger-result"></p>
 
-        </div>
-    </div>
-    <div id="Railway Schedule">
-        <table class="table">
-            <tr class="head">
-                <th rowspan="2">Train Number</th>
-                <th rowspan="2">Train Name</th>
-                <th colspan="2">Time</th>
-                <th colspan="2">Station</th>
-            </tr>
-            <tr class="sub-head">
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Train From</th>
-                <th>Train To</th>
-            </tr>
-        </table>
-    </div>
-        </div>
-        <div card="Hello">
-            <div class="container w-25" id="ticket-attributes">
-                <div class="row">
-                    <div class="col">
-                        <h3>Ticket Order</h3>
-                        <form id="ticket-form">
-                            <div class="form-floating mb-3">
-                                <select class="form-select" aria-label="Default Select Example" id="train-number">
-                                    <option selected>Train Number</option>
-                                    <option value="12235"></option>
-                                    <option value="12236"></option>
-                                    <option value="12301"></option>
-                                    <option value="12302"></option>
-                                    <option value="12305"></option>
-                                    <option value="12306"></option>
-                                </select>
-                        <div class="form-floating mb-3">
-                            <select class="form-select" aria-label="Default Select Example" id="train-name">
-                                <option selected>Train Name</option>
-                                <option value="Dibrugarh - New Delhi Rajdhani Express"></option>
-                                <option value="New Delhi - Dibrugarh Rajdhani Express"></option>
-                                <option value="New Delhi - Dibrugarh Rajdhani Express"></option>
-                                <option value="New Delhi - Howrah Rajdhani Express (Via Gaya)"></option>
-                                <option value="New Delhi - Howrah Rajdhani Express (Via Gaya)"></option>
-                                <option value="New Delhi - Howrah Rajdhani Express (via Patna)"></option>
-                            </select>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <select class="form-select" aria-lable="Default Select Example" id="departure">
-                                <option selected>Depature</option>
-                                <option value="19:25"></option>
-                                <option value="09:25"></option>
-                                <option value="16:55"></option>
-                                <option value="16:55"></option>
-                                <option value="14:05"></option>
-                                <option value="16:55"></option>
-                            </select>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="s-quantity" placeholder="Number Of TIckets">
-                            <label for="s-quantity">Number Of Tickets</label>
-                        </div>
-                        <button type="submit" class="btn btn-dark">Submit Order</button>
-                    </form>
-                    </div>
-                    </div>
-                    </div>
-                    <div>
-                        <p>Enter your details in the fields below,after your order then press the "Submit form" button to submit your details.</p>
-                        <form action="/action_page.php">
-                            First Name: <input type="text" name="fname"><br>
-                            Last Name: <input type="text"  name="lname"><br><br>
-                            <input id="myForm" type="button" onClick="clickAlert()" value="Submit Form">  
-                        </form>
-                    </div>
-                    <form id="comment-form" class="comment-form">
-                        <input
-                          class="comment-input"
-                          type="text"
-                          name="comment"
-                          id="comment"
-                          placeholder="Add Comment"
-                          />
-                         <button class="comment-button" type="submit">Post</button>
-                         <br><br>
-
-                    </form>
-  <script src="./script.js"></script>
-    </body>
-    </html>
-        
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

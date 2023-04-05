@@ -1,100 +1,45 @@
-document.addEventListener("DOMContentLoaded",() => {
-    getAllTrains();
-    document.querySelector("#table-order").addEventListener("submit", (e) => {
-        e.preventDefault();
-        let form =e.target;
+// Bob's Burgers API URL
+const API_URL = "https://bobsburgers-api.herokuapp.com/characters/?limit=9&skip=32";
+
+// Function to fetch burger order data from API and display result
+function orderBurger() {
+    const burgerType = document.getElementById("burger-type").value;
+    const topping1 = document.getElementById("topping1").value;
+    const topping2 = document.getElementById("topping2").value;
+    const topping3 = document.getElementById("topping3").value;
+
+    // Fetch data from API
+    $.getJSON(API_URL, function(data) {
+        const burgerName = data[Math.floor(Math.random() * data.length)].name;
+        const burgerDescription = `A delicious ${burgerType} burger with ${topping1}, ${topping2}, and ${topping3}.`;
+        const result = `Your order is ready! You ordered the ${burgerName} burger: ${burgerDescription}`;
+        document.getElementById("burger-result").innerHTML = result;
     });
-});
-
-
-const train_num = 12235
-const trainName = "Dibrugarh - New Delhi Rajdhani Express"
-const departTime = 1925
-const trains = [
-    {train_num:12236, trainName: "New Delhi - Dibrugarh Rajdhani Express",  departTime: 0925,},
-  {train_num:12301, trainName: "Howrah - New Delhi Rajdhani Express (via Gaya)",  departTime:1655 ,},
-   {train_num:12302, trainName: "New Delhi - Howrah Rajdhani Express (Via Gaya)", departTime:1655,},
-   {train_num:12305, trainName: "Howrah - New Delhi Rajdhani Express (via Patna)",  departTime:1405,},
-   {train_num:12306, trainName: "New Delhi - Howrah Rajdhani Express (via Patna)",  departTime:1655,}  
-]
-let train = {train_num, trainName, departTime}
-trains.push(train);
-console.log(trains);
-
-
-const input = document.getElementById('myForm').addEventListener("click", clickAlert);
-
-function clickAlert() {
-  alert('Your details has been submitted successfully');
 }
 
-document.getElementById("demo").addEventListener("click", myFunction);
-function myFunction() {
-  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+// Speech recognition function to order burger with voice commands
+if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 5;
+    document.querySelector('button').addEventListener('click', () => {
+        recognition.start();
+    });
+    recognition.addEventListener('result', (e) => {
+        let last = e.results.length - 1;
+        const burgerType = e.results[last][0].transcript;
+        const topping1 = e.results[last][0].transcript;
+        const topping2 = e.results[last][0].transcript;
+        const topping3 = e.results[last][0].transcript;
+        const burgerDescription = `A delicious ${burgerType} burger with ${topping1}, ${topping2}, and ${topping3}.`;
+        // Fetch data from API
+        $.getJSON(API_URL, function(data) {
+            const burgerName = data[Math.floor(Math.random() * data.length)].name;
+            const result = `Your order is ready! You ordered the ${burgerName} burger: ${burgerDescription}`;
+            document.getElementById("burger-result").innerHTML = result;
+        });
+    });
+} else {
+    document.getElementById("burger-result").innerHTML = "Sorry, speech recognition is not supported by your browser.";
 }
-
-
-function renderTrainRow(train){
-    console.log(train)
-    let row =document.createElement('tr');
-    row.innerHTML=`
-    <td>${train.train_num}</td>
-    <td>${train.name}</td>
-    <td>${train.data.arriveTime}</td>
-    <td>${train.data.departTime}</td>
-    <td>${train.train_from}</td>
-    <td>${train.train_to}</td>
-    `;
-    document.querySelector('.table').appendChild(row)
-}
-function getAllTrains(){const options = {
-	method: 'POST',
-	headers: {
-		'content-type': 'application/json',
-		'X-RapidAPI-Key': '91915021edmsha0b4e2c95975759p1b9176jsnffcc33e7e69f',
-		'X-RapidAPI-Host': 'trains.p.rapidapi.com'
-	},
-	body: '{"search":"Rajdhani"}'
-};
-
-fetch('https://trains.p.rapidapi.com/', options)
-	.then(response => response.json())
-	.then(response => {
-        response.forEach(train => renderTrainRow(train));
-        console.log(response)
-    })
-	.catch(err => console.error(err));
-}
-
-var tickets = [];
-
-document.getElementById("ticket-form").addEventListener("submit", submitOrder);
-function submitOrder(event){
-    event.preventDefault();
-    var trainNo = document.getElementById('trainNumber').value;
-    var trainName = document.getElementById('trainName').value;
-    var departure = document.getElementById('departure').value;
-    var ticket = {
-        trainNo,
-        trainName,
-        departure
-    };
-    tickets.push(ticket);
-    console.log('tickets', tickets)
-}
-
-function renderTickets(ticket){
-    console.log(ticket)
-    let row =document.createElement('tr');
-    row.innerHTML=`
-    <td>${tickets.trainNo}</td>
-    <td>${ticket.trainName}</td>
-    <td>${ticket.departure}</td>
-    `;
-    document.querySelector('.table').appendChild(row)
-}
-
-// function initialize(){
-//     getAllTrains()
-// }
-// initialize();

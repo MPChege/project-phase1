@@ -1,58 +1,685 @@
 {
-    "trains" :[
+    "name": "Finch Station",
+    "uri": "finch_station",
+    "stops": [
         {
-            "id" :1,
-            "train_num": "12235",
-            "name": "Dibrugarh - New Delhi Rajdhani Express",
-            "arriveTime": "13:55 +2 nights",
-            "departTime": "19:25",
-            "train_from": "DBRG",
-            "train_to": "NDLS"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_bishop_entrance",
+            "name": "Finch Station Bishop Entrance",
+            "routes": []
         },
         {
-            "id" :2,
-            "train_num": "12236",
-            "name": "New Delhi - Dibrugarh Rajdhani Express",
-            "arriveTime": "05:15 +2 nights",
-            "departTime": "09:25",
-            "train_from": "NDLS",
-            "train_to": "DBRG"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_bus_bay",
+            "name": "Finch Station Bus Bay",
+            "routes": [
+                {
+                    "route_group_id": "32",
+                    "uri": "36_finch_west",
+                    "name": "36 Finch West",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677469,
+                            "shape": "36A Finch West To Kipling"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677469,
+                            "shape": "36B Finch West To Humberwood"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:57a",
+                            "departure_timestamp": 1680677829,
+                            "shape": "36C Finch West To Jane"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:59a",
+                            "departure_timestamp": 1680677949,
+                            "shape": "36A Finch West To Kipling"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:59a",
+                            "departure_timestamp": 1680677949,
+                            "shape": "36B Finch West To Humberwood"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:05a",
+                            "departure_timestamp": 1680678309,
+                            "shape": "36D Finch West To Weston Road And Milvan"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:07a",
+                            "departure_timestamp": 1680678429,
+                            "shape": "36A Finch West To Kipling"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:07a",
+                            "departure_timestamp": 1680678429,
+                            "shape": "36B Finch West To Humberwood"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:13a",
+                            "departure_timestamp": 1680678789,
+                            "shape": "36C Finch West To Jane"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:21a",
+                            "departure_timestamp": 1680679269,
+                            "shape": "36D Finch West To Weston Road And Milvan"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:29a",
+                            "departure_timestamp": 1680679749,
+                            "shape": "36C Finch West To Jane"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:37a",
+                            "departure_timestamp": 1680680229,
+                            "shape": "36D Finch West To Weston Road And Milvan"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "35",
+                    "uri": "39_finch_east",
+                    "name": "39 Finch East",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677469,
+                            "shape": "39F Finch East To Seneca College"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:53a",
+                            "departure_timestamp": 1680677589,
+                            "shape": "39D Finch East To Neilson"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:56a",
+                            "departure_timestamp": 1680677799,
+                            "shape": "39D Finch East To Neilson"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:58a",
+                            "departure_timestamp": 1680677889,
+                            "shape": "39F Finch East To Seneca College"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "39D Finch East To Neilson"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "39E Finch East To Neilson Express"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:05a",
+                            "departure_timestamp": 1680678309,
+                            "shape": "39F Finch East To Seneca College"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:14a",
+                            "departure_timestamp": 1680678849,
+                            "shape": "39E Finch East To Neilson Express"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:28a",
+                            "departure_timestamp": 1680679689,
+                            "shape": "39E Finch East To Neilson Express"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "38",
+                    "uri": "42_cummer",
+                    "name": "42 Cummer",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677469,
+                            "shape": "42 Cummer To Victoria Park"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "42 Cummer To Victoria Park"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:01a",
+                            "departure_timestamp": 1680678069,
+                            "shape": "42B Cummer To Kennedy"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:03a",
+                            "departure_timestamp": 1680678189,
+                            "shape": "42A Cummer To Middlefield"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:09a",
+                            "departure_timestamp": 1680678549,
+                            "shape": "42 Cummer To Victoria Park"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:19a",
+                            "departure_timestamp": 1680679149,
+                            "shape": "42B Cummer To Kennedy"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:21a",
+                            "departure_timestamp": 1680679269,
+                            "shape": "42A Cummer To Middlefield"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:37a",
+                            "departure_timestamp": 1680680229,
+                            "shape": "42B Cummer To Kennedy"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:39a",
+                            "departure_timestamp": 1680680349,
+                            "shape": "42A Cummer To Middlefield"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "49",
+                    "uri": "53_steeles_east",
+                    "name": "53 Steeles East",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677469,
+                            "shape": "53 Steeles East To Pharmacy (Morning Peak)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "53B Steeles East To Markham Road"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "53E Steeles East To Markham Road Express"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:03a",
+                            "departure_timestamp": 1680678189,
+                            "shape": "53 Steeles East To Pharmacy (Morning Peak)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:04a",
+                            "departure_timestamp": 1680678279,
+                            "shape": "53E Steeles East To Markham Road Express"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:05a",
+                            "departure_timestamp": 1680678309,
+                            "shape": "53F Steeles East To Staines"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:09a",
+                            "departure_timestamp": 1680678549,
+                            "shape": "53E Steeles East To Markham Road Express"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:12a",
+                            "departure_timestamp": 1680678729,
+                            "shape": "53B Steeles East To Markham Road"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:15a",
+                            "departure_timestamp": 1680678909,
+                            "shape": "53 Steeles East To Pharmacy (Morning Peak)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:24a",
+                            "departure_timestamp": 1680679449,
+                            "shape": "53B Steeles East To Markham Road"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:32a",
+                            "departure_timestamp": 1680679929,
+                            "shape": "53F Steeles East To Staines"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:59a",
+                            "departure_timestamp": 1680681549,
+                            "shape": "53F Steeles East To Staines"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "8:53a",
+                            "departure_timestamp": 1680684789,
+                            "shape": "53A Steeles East To Middlefield"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "9:19a",
+                            "departure_timestamp": 1680686349,
+                            "shape": "53A Steeles East To Middlefield"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "9:45a",
+                            "departure_timestamp": 1680687909,
+                            "shape": "53A Steeles East To Middlefield"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:04p",
+                            "departure_timestamp": 1680707049,
+                            "shape": "53 Steeles East To Pharmacy (Afternoon Peak)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:13p",
+                            "departure_timestamp": 1680707619,
+                            "shape": "53 Steeles East To Pharmacy (Afternoon Peak)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:23p",
+                            "departure_timestamp": 1680708189,
+                            "shape": "53 Steeles East To Pharmacy (Afternoon Peak)"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "56",
+                    "uri": "60_steeles_west",
+                    "name": "60 Steeles West",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:51a",
+                            "departure_timestamp": 1680677499,
+                            "shape": "60C Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:53a",
+                            "departure_timestamp": 1680677589,
+                            "shape": "60D Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:59a",
+                            "departure_timestamp": 1680677949,
+                            "shape": "60C Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678009,
+                            "shape": "60E Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:00a",
+                            "departure_timestamp": 1680678039,
+                            "shape": "60D Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:03a",
+                            "departure_timestamp": 1680678189,
+                            "shape": "60F Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:06a",
+                            "departure_timestamp": 1680678399,
+                            "shape": "60C Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:08a",
+                            "departure_timestamp": 1680678489,
+                            "shape": "60D Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:09a",
+                            "departure_timestamp": 1680678569,
+                            "shape": "60F Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:12a",
+                            "departure_timestamp": 1680678729,
+                            "shape": "60E Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:15a",
+                            "departure_timestamp": 1680678949,
+                            "shape": "60F Steeles West To York University"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:24a",
+                            "departure_timestamp": 1680679449,
+                            "shape": "60E Steeles West To Highway 27"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "5:51p",
+                            "departure_timestamp": 1680717069,
+                            "shape": "60B Steeles West To Martin Grove"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:15p",
+                            "departure_timestamp": 1680718509,
+                            "shape": "60B Steeles West To Martin Grove"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:39p",
+                            "departure_timestamp": 1680719949,
+                            "shape": "60B Steeles West To Martin Grove"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "92",
+                    "uri": "97_yonge",
+                    "name": "97 Yonge",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:35a",
+                            "departure_timestamp": 1680680110,
+                            "shape": "97B Yonge To Steeles (morning)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "8:05a",
+                            "departure_timestamp": 1680681910,
+                            "shape": "97B Yonge To Steeles (morning)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "8:35a",
+                            "departure_timestamp": 1680683710,
+                            "shape": "97B Yonge To Steeles (morning)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "10:30a",
+                            "departure_timestamp": 1680690612,
+                            "shape": "97C Yonge To Steeles"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "11:00a",
+                            "departure_timestamp": 1680692412,
+                            "shape": "97C Yonge To Steeles"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "11:30a",
+                            "departure_timestamp": 1680694212,
+                            "shape": "97C Yonge To Steeles"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:58p",
+                            "departure_timestamp": 1680710306,
+                            "shape": "97B Yonge To Steeles (afternoon)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "4:28p",
+                            "departure_timestamp": 1680712106,
+                            "shape": "97B Yonge To Steeles (afternoon)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "4:58p",
+                            "departure_timestamp": 1680713906,
+                            "shape": "97B Yonge To Steeles (afternoon)"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:29p",
+                            "departure_timestamp": 1680722967,
+                            "shape": "97 Yonge To Steeles"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:59p",
+                            "departure_timestamp": 1680724767,
+                            "shape": "97 Yonge To Steeles"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "8:29p",
+                            "departure_timestamp": 1680726567,
+                            "shape": "97 Yonge To Steeles"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "116",
+                    "uri": "125_drewry",
+                    "name": "125 Drewry",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:57a",
+                            "departure_timestamp": 1680677829,
+                            "shape": "125 Drewry To Bathurst Torresdale"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:12a",
+                            "departure_timestamp": 1680678729,
+                            "shape": "125 Drewry To Bathurst Torresdale"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "7:20a",
+                            "departure_timestamp": 1680679209,
+                            "shape": "125 Drewry To Bathurst Torresdale"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "152",
+                    "uri": "308_finch_east",
+                    "name": "308 Finch East",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "2:00a",
+                            "departure_timestamp": 1680746409,
+                            "shape": "308 Finch East To Markham Road"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "2:30a",
+                            "departure_timestamp": 1680748209,
+                            "shape": "308 Finch East To Markham Road"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:00a",
+                            "departure_timestamp": 1680750009,
+                            "shape": "308 Finch East To Markham Road"
+                        }
+                    ]
+                },
+                {
+                    "route_group_id": "153",
+                    "uri": "309_finch_west",
+                    "name": "309 Finch West",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "2:00a",
+                            "departure_timestamp": 1680746409,
+                            "shape": "309 Finch West To Woodbine Racetrack"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "2:30a",
+                            "departure_timestamp": 1680748209,
+                            "shape": "309 Finch West To Woodbine Racetrack"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "3:00a",
+                            "departure_timestamp": 1680750009,
+                            "shape": "309 Finch West To Woodbine Racetrack"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "id":3,
-            "train_num": "12301",
-            "name": "New Delhi - Dibrugarh Rajdhani Express",
-            "arriveTime": "10:00 +1 night",
-            "departTime": "16:55",
-            "train_from": "HWH",
-            "train_to": "NDLS"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_concourse",
+            "name": "Finch Station Concourse",
+            "routes": []
         },
         {
-            "id":4,
-            "train_num": "12302",
-            "name": "New Delhi - Howrah Rajdhani Express (Via Gaya)",
-            "arriveTime": "09:50 +1 night",
-            "departTime": "16:55",
-            "train_from": "NDLS",
-            "train_to": "HWH"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_elevator_entrance",
+            "name": "Finch Station Elevator Entrance",
+            "routes": []
         },
         {
-            "id":5,
-            "train_num": "12305",
-            "name": "Howrah - New Delhi Rajdhani Express (via Patna)",
-            "arriveTime": "10:00 +1 night",
-            "departTime": "14:05",
-            "train_from": "HWH",
-            "train_to": "NDLS"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_go_hallway",
+            "name": "Finch Station GO Hallway",
+            "routes": []
         },
         {
-            "id":6,
-            "train_num": "12306",
-            "name": "New Delhi - Howrah Rajdhani Express (via Patna)",
-            "arriveTime": "12:15 +1 night",
-            "departTime": "16:55",
-            "train_from": "NDLS",
-            "train_to": "HWH"
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_mezzanine",
+            "name": "Finch Station Mezzanine",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_northeast_entrance",
+            "name": "Finch Station Northeast Entrance",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_northwest_entrance",
+            "name": "Finch Station Northwest Entrance",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_passenger_pick_up",
+            "name": "Finch Station Passenger Pick Up",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_passenger_pick_up_mezzanine",
+            "name": "Finch Station Passenger Pick Up Mezzanine",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_pemberton_entrance",
+            "name": "Finch Station Pemberton Entrance",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_subway_platform",
+            "name": "Finch Station Subway Platform",
+            "routes": [
+                {
+                    "route_group_id": "1",
+                    "uri": "yonge-university-spadina_subway",
+                    "name": "Yonge-University-Spadina Subway",
+                    "stop_times": [
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:50a",
+                            "departure_timestamp": 1680677409,
+                            "shape": "Yonge-University-Spadina Subway To Downsview Station"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:54a",
+                            "departure_timestamp": 1680677691,
+                            "shape": "Yonge-University-Spadina Subway To Downsview Station"
+                        },
+                        {
+                            "service_id": 1,
+                            "departure_time": "6:59a",
+                            "departure_timestamp": 1680677973,
+                            "shape": "Yonge-University-Spadina Subway To Downsview Station"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_yonge_east_entrance",
+            "name": "Finch Station Yonge East Entrance",
+            "routes": []
+        },
+        {
+            "agency": "Toronto Transit Commission",
+            "uri": "finch_station_yonge_west_entrance",
+            "name": "Finch Station Yonge West Entrance",
+            "routes": []
         }
-    ]
-  }
+    ],
+    "time": 1680677383
+}
