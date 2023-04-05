@@ -1,45 +1,112 @@
+/* Set background color */
 body {
-    background-color: #f2f2f2; /* set the background color to a light gray */
-    font-family: Arial, sans-serif; /* use a sans-serif font for better readability */
+    background-color: #1d1d1d;
   }
   
-  .menu {
-    background-color: #ffffff; /* set the background color of the menu section to white */
-    padding: 20px; /* add some padding to the menu section */
-    border-radius: 10px; /* round the corners of the menu section */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+  /* Center container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
   }
   
-  h1 {
-    color: #e84c3d; /* set the color of the heading to a bright red */
-    text-align: center; /* center the heading */
-    margin-top: 50px; /* add some margin to the top */
+  /* Center title */
+  .title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 36px;
+  }
+  
+  /* Add padding and border to form elements */
+  form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  /* Style form labels and inputs */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
   }
   
   button[type="submit"] {
-    background-color: #e84c3d; /* set the background color of the submit button to the same bright red */
-    color: #ffffff; /* set the text color to white */
-    padding: 10px 20px; /* add some padding */
-    border: none; /* remove the border */
-    border-radius: 5px; /* round the corners */
-    font-weight: bold; /* make the text bold */
-    margin-top: 20px; /* add some margin to the top */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5b5b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
   
   button[type="submit"]:hover {
-    background-color: #d34431; /* darken the background color on hover */
-    cursor: pointer; /* change the cursor to a hand on hover */
+    background-color: #ff1f1f;
   }
   
+  /* Style order summary */
   .order-summary {
-    background-color: #ffffff; /* set the background color of the order summary section to white */
-    padding: 20px; /* add some padding */
-    border-radius: 10px; /* round the corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
   }
   
-  h2 {
-    color: #e84c3d; /* set the color of the subheadings to the same bright red */
-    margin-top: 0; /* remove the default margin from the top */
+  .order-summary h2 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary p {
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .image-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  /* Add some hover effect to the character selection */
+  #character {
+    background-color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #character:hover {
+    box-shadow: 0px 0px 10px #ccc;
   }
   
