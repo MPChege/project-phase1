@@ -10,10 +10,25 @@ function orderBurger() {
 
     // Fetch data from API
     $.getJSON(API_URL, function(data) {
+        console.log(data)
         const burgerName = data[Math.floor(Math.random() * data.length)].name;
         const burgerDescription = `A delicious ${burgerType} burger with ${topping1}, ${topping2}, and ${topping3}.`;
         const result = `Your order is ready! You ordered the ${burgerName} burger: ${burgerDescription}`;
         document.getElementById("burger-result").innerHTML = result;
+        document.getElementById("burger-image").src = `https://bobsburgers-api.herokuapp.com/images/characters/${36}.jpg`;
+        document.getElementById("burger-image").alt = burgerName;
+
+        const charactersDiv = document.getElementById('characters')
+
+        data.forEach((character) => {
+            const characterImage = document.createElement('img')
+            characterImage.src = character.image
+
+            const nameParagraph = document.createElement('p');
+            nameParagraph.innerText = character.name
+
+            charactersDiv.append(characterImage, nameParagraph)
+        })
     });
 }
 
@@ -29,15 +44,17 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
     recognition.addEventListener('result', (e) => {
         let last = e.results.length - 1;
         const burgerType = e.results[last][0].transcript;
-        const topping1 = e.results[last][0].transcript;
-        const topping2 = e.results[last][0].transcript;
-        const topping3 = e.results[last][0].transcript;
+        const topping1 = e.results[last][1].transcript;
+        const topping2 = e.results[last][2].transcript;
+        const topping3 = e.results[last][3].transcript;
         const burgerDescription = `A delicious ${burgerType} burger with ${topping1}, ${topping2}, and ${topping3}.`;
         // Fetch data from API
         $.getJSON(API_URL, function(data) {
             const burgerName = data[Math.floor(Math.random() * data.length)].name;
             const result = `Your order is ready! You ordered the ${burgerName} burger: ${burgerDescription}`;
             document.getElementById("burger-result").innerHTML = result;
+            document.getElementById("burger-image").src = `https://bobsburgers-api.herokuapp.com/images/${burgerName}.jpg`;
+            document.getElementById("burger-image").alt = burgerName;
         });
     });
 } else {
