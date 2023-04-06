@@ -45,10 +45,15 @@ document.querySelector("form").addEventListener("submit", (event) => {
   characterSummary.innerText = `Favorite Character: ${characterName}`;
 
   // Update images
-  const burgerImageUrl = `https://dummyimage.com/200x200/333333/ffffff&text=${burgerType}`;
-  burgerImage.src = burgerImageUrl;
+  if (burgerType === "Cheeseburger") {
+    const burgerImageUrl = "https://hips.hearstapps.com/del.h-cdn.co/assets/16/14/2048x1024/landscape-1459969268-cheeses-is-born.jpg?resize=1200:*";
+    burgerImage.src = burgerImageUrl;
+  } else 
+  {
+    const burgerImageUrl = `https://dummyimage.com/200x200/333333/ffffff&text=${burgerType}`;
+    burgerImage.src = burgerImageUrl;
+  }
+  
   const characterImageUrl = `https://bobsburgers-api.herokuapp.com/images/characters/${characterId}.jpg`;
   characterImage.src = characterImageUrl;
 });
-
- 
