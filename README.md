@@ -4,6 +4,15 @@
 
 1. [Bob's Burger](#ExplanationofwhatBosBurger)
 2. [Description](#description)
+3. [Technologies Used](#technologies-used)
+4. [How it works](#how-it-works)
+5. [Improvements:](#improvements)
+6. [Dependencies](#dependencies)
+7. [How to run the application](#how-to-run-the-application)
+8. [Usage](#usage)
+9. [Contributing](#contributing)
+10. [Credits](#credits)
+11. [License](#license)
 
 
 ## Bob's Burger
