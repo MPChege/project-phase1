@@ -1,4 +1,11 @@
 # project-phase1
+
+<h1><b>Table of Content</h1></b>
+
+1. [Bob's Burger](#ExplanationofwhatBosBurger)
+2. [Description](#description)
+
+
 ## Bob's Burger
 Bob's Burger is an American animated website that is centered on the Belcher family—parents Bob runs a hamburger restaurant.
 
