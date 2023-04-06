@@ -47,8 +47,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   // Update images
   const burgerImageUrl = `https://dummyimage.com/200x200/333333/ffffff&text=${burgerType}`;
   burgerImage.src = burgerImageUrl;
-  const characterImageUrl = `https://bobsburgers-api.herokuapp.com/images/medium/${characterId}.jpg`;
+  const characterImageUrl = `https://bobsburgers-api.herokuapp.com/images/characters/${characterId}.jpg`;
   characterImage.src = characterImageUrl;
 });
- //how to center a container?
  
