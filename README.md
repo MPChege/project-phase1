@@ -19,9 +19,9 @@ JavaScript is used to fetch data from the Bob's Burgers API, dynamically populat
 When the page loads, the JavaScript code fetches data from the Bob's Burgers API using the fetch() function. The data is then converted to JSON using the response.json() method.
 The code then iterates over the data and creates an option element for each character, with the character's name as both the value and text content. The option elements are appended to the select element with the id "character".
 When the user submits the order form, an event listener is triggered. The JavaScript code extracts the user's selections from the form inputs and logs them to the console.
-The code then creates a summary of the user's selections and displays it in the "order-summary" container. The summary includes the burger type, toppings, and selected character name. An image of the selected character is also displayed.
-The CSS code styles the form, character selection dropdown, and order summary container, and adds some hover effects to the character selection dropdown. The background color is set to a dark gray color, and the text color is set to white. The order summary container and form inputs have a white background. The order summary container has a margin-top of 50px and padding of 20px, while the image container has a margin-top of 20px and text-align center.
-Improvements:
+The code then creates a summary of the user's selections and displays it in the "order-summary" container. 
+
+## Improvements:
 
 Error handling could be added to the fetch request to handle any errors that may occur.
 The UI could be improved with more styling and layout adjustments.
