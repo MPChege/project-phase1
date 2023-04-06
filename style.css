@@ -90,10 +90,11 @@ body {
   .image-container {
     margin-top: 20px;
     text-align: center;
+
   }
   
   img {
-    max-width: 100%;
+    max-width: 50%;
   }
   
   /* Add some hover effect to the character selection */
