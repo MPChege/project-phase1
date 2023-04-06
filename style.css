@@ -1,6 +1,16 @@
+
 /* Set background color */
 body {
     background-color: #1d1d1d;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  header img {
+    min-width: 80%;
   }
   
   /* Center container */

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,55 +7,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <img src="https://wallpapercave.com/wp/wp1924074.jpg" alt="Bob's Burger Animation" />
+    </header>
     <div class="container">
       <h1 class="title">Burger Order Form</h1>
       <div class="menu">
-  <form>
-    <label for="burger-type">Burger Type:</label>
-    <select id="burger-type">
-      <option value="hamburger">Hamburger</option>
-      <option value="cheeseburger">Cheeseburger</option>
-      <option value="bacon-burger">Bacon Burger</option>
-      <option value="veggie-burger">Veggie Burger</option>
-    </select>
-
-    <label for="toppings">Toppings:</label>
-    <input type="checkbox" id="lettuce" name="topping" value="lettuce" />
-    <label for="lettuce">Lettuce</label>
-
-    <input type="checkbox" id="tomato" name="topping" value="tomato" />
-    <label for="tomato">Tomato</label>
-
-    <input type="checkbox" id="onion" name="topping" value="onion" />
-    <label for="onion">Onion</label>
-
-    <input type="checkbox" id="pickles" name="topping" value="pickles" />
-    <label for="pickles">Pickles</label>
-
-    <br />
-
-    <label for="character">Choose your Favorite Bob's Burger Character:</label>
-    <select id="character"></select>
-
-    <br />
-
-    <button type="submit">Place Order</button>
-  </form>
-</div>
-
-<div class="order-summary">
-  <h2>Order Summary</h2>
-  <p id="burger-type-summary"></p>
-  <p id="toppings-summary"></p>
-  <div class="image-container">
-    <img id="burger-image" src="" alt="Burger Image" />
-  </div>
-  <p id="character-summary"></p>
-  <div class="image-container">
-    <img id="character-image" src="" alt="Character Image" />
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+        <form>
+          <label for="burger-type">Burger Type:</label>
+          <select id="burger-type">
+            <option value="hamburger">Hamburger</option>
+            <option value="cheeseburger">Cheeseburger</option>
+            <option value="bacon-burger">Bacon Burger</option>
+            <option value="veggie-burger">Veggie Burger</option>
+          </select>
+      
+          <label for="toppings">Toppings:</label>
+          <input type="checkbox" id="lettuce" name="topping" value="lettuce" />
+          <label for="lettuce">Lettuce</label>
+      
+          <input type="checkbox" id="tomato" name="topping" value="tomato" />
+          <label for="tomato">Tomato</label>
+      
+          <input type="checkbox" id="onion" name="topping" value="onion" />
+          <label for="onion">Onion</label>
+      
+          <input type="checkbox" id="pickles" name="topping" value="pickles" />
+          <label for="pickles">Pickles</label>
+      
+          <br />
+      
+          <label for="character">Choose your Favorite Bob's Burger Character:</label>
+          <select id="character"></select>
+      
+          <br />
+      
+          <button type="submit">Place Order</button>
+          
+        </form>
+      </div>
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p id="burger-type-summary"></p>
+        <p id="toppings-summary"></p>
+        <div class="image-container">
+          <!-- <img id="burger-image" src="" alt="Burger Image" /> -->
+        </div>
+        <p id="character-summary"></p>
+        <div class="image-container">
+          <img id="character-image" src="" alt="Character Image" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
